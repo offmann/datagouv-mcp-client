@@ -1,0 +1,299 @@
+{
+  "skyline": {
+    "france_by_category": [
+      {
+        "name": "Redistribution (retraites, aides)",
+        "value": 19.28
+      },
+      {
+        "name": "Services sociaux (santé, éducation)",
+        "value": 18.97
+      },
+      {
+        "name": "Services généraux (défense, justice)",
+        "value": 9.34
+      },
+      {
+        "name": "Soutien à l'économie",
+        "value": 7.76
+      },
+      {
+        "name": "Charge de la dette",
+        "value": 1.89
+      }
+    ],
+    "europe_comparison": {
+      "France": {
+        "Charge dette": 1.89,
+        "Redistribution": 19.28,
+        "Services généraux": 9.34,
+        "Services sociaux": 18.97,
+        "Soutien économie": 7.76
+      },
+      "Allemagne": {
+        "Charge dette": 0.87,
+        "Redistribution": 15.3,
+        "Services généraux": 9.83,
+        "Services sociaux": 16.39,
+        "Soutien économie": 5.7
+      },
+      "Italie": {
+        "Charge dette": 3.69,
+        "Redistribution": 20.08,
+        "Services généraux": 7.13,
+        "Services sociaux": 12.38,
+        "Soutien économie": 10.84
+      },
+      "Espagne": {
+        "Charge dette": 2.4,
+        "Redistribution": 16.81,
+        "Services généraux": 7.59,
+        "Services sociaux": 13.86,
+        "Soutien économie": 5.03
+      },
+      "Belgique": {
+        "Charge dette": 2.02,
+        "Redistribution": 17.19,
+        "Services généraux": 8.82,
+        "Services sociaux": 18.74,
+        "Soutien économie": 6.93
+      }
+    },
+    "year": 2023
+  },
+  "budget": {
+    "missions": [
+      {
+        "name": "Remboursements et dégrèvements",
+        "value": 147140795835.0,
+        "pct": 17.9
+      },
+      {
+        "name": "Avances aux collectivités territoriales et aux collectivités régies par les articles 73, 74 et 76 de la Constitution",
+        "value": 134093165838.0,
+        "pct": 16.3
+      },
+      {
+        "name": "Enseignement scolaire",
+        "value": 88817133670.0,
+        "pct": 10.8
+      },
+      {
+        "name": "Pensions",
+        "value": 68483628839.0,
+        "pct": 8.3
+      },
+      {
+        "name": "Engagements financiers de l'État",
+        "value": 61338164329.0,
+        "pct": 7.5
+      },
+      {
+        "name": "Défense",
+        "value": 60003543448.0,
+        "pct": 7.3
+      },
+      {
+        "name": "Recherche et enseignement supérieur",
+        "value": 31285707922.0,
+        "pct": 3.8
+      },
+      {
+        "name": "Solidarité, insertion et égalité des chances",
+        "value": 30373601344.0,
+        "pct": 3.7
+      },
+      {
+        "name": "Sécurités",
+        "value": 25215409206.0,
+        "pct": 3.1
+      },
+      {
+        "name": "Cohésion des territoires",
+        "value": 23781229009.0,
+        "pct": 2.9
+      },
+      {
+        "name": "Travail, emploi et administration des ministères sociaux",
+        "value": 21632987399.0,
+        "pct": 2.6
+      },
+      {
+        "name": "Écologie, développement et mobilité durables",
+        "value": 20504444099.0,
+        "pct": 2.5
+      },
+      {
+        "name": "Justice",
+        "value": 12459092589.0,
+        "pct": 1.5
+      },
+      {
+        "name": "Gestion des finances publiques",
+        "value": 10971512721.0,
+        "pct": 1.3
+      },
+      {
+        "name": "Prêts et avances à divers services de l'État ou organismes gérant des services publics",
+        "value": 10418164171.0,
+        "pct": 1.3
+      },
+      {
+        "name": "Participations financières de l'État",
+        "value": 9568980084.0,
+        "pct": 1.2
+      },
+      {
+        "name": "Régimes sociaux et de retraite",
+        "value": 5995017245.0,
+        "pct": 0.7
+      },
+      {
+        "name": "Investir pour la France de 2030",
+        "value": 5800000000.0,
+        "pct": 0.7
+      },
+      {
+        "name": "Aide publique au développement",
+        "value": 5153965943.0,
+        "pct": 0.6
+      },
+      {
+        "name": "Administration générale et territoriale de l'État",
+        "value": 4960943626.0,
+        "pct": 0.6
+      },
+      {
+        "name": "Agriculture, alimentation, forêt et affaires rurales",
+        "value": 4435643789.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Relations avec les collectivités territoriales",
+        "value": 4060628302.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Audiovisuel public",
+        "value": 4029162945.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Culture",
+        "value": 3919074364.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Économie",
+        "value": 3884818906.0,
+        "pct": 0.5
+      }
+    ],
+    "total": 823043976041.0
+  },
+  "recettes": {
+    "recettes": [
+      {
+        "name": "Taxe sur la valeur ajoutée",
+        "value": 183857035556.0,
+        "pct": 38.8
+      },
+      {
+        "name": "Impôt sur le revenu",
+        "value": 117616000769.0,
+        "pct": 24.8
+      },
+      {
+        "name": "Impôt sur les sociétés",
+        "value": 91415375411.0,
+        "pct": 19.3
+      },
+      {
+        "name": "Taxe intérieure de consommation sur les produits énergétiques",
+        "value": 18422732922.0,
+        "pct": 3.9
+      },
+      {
+        "name": "Mutations à titre gratuit par décès",
+        "value": 15400000000.0,
+        "pct": 3.2
+      },
+      {
+        "name": "Prélèvements de solidarité",
+        "value": 15210000000.0,
+        "pct": 3.2
+      },
+      {
+        "name": "Cotisation sur la valeur ajoutée des entreprises",
+        "value": 4160000000.0,
+        "pct": 0.9
+      },
+      {
+        "name": "Mutations à titre gratuit entre vifs (donations)",
+        "value": 3936000000.0,
+        "pct": 0.8
+      },
+      {
+        "name": "Autres taxes",
+        "value": 3258000000.0,
+        "pct": 0.7
+      },
+      {
+        "name": "Impôt sur la fortune immobilière",
+        "value": 2439000000.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Autres impôts directs perçus par voie d'émission de rôles",
+        "value": 2398000000.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Autres taxes intérieures",
+        "value": 2159071000.0,
+        "pct": 0.5
+      },
+      {
+        "name": "Autres recettes fiscales",
+        "value": 14094337295.0,
+        "pct": 3.0
+      }
+    ],
+    "total": 474365552953.0
+  },
+  "meta": {
+    "generated_at_utc": "2026-02-27T13:46:29+00:00",
+    "stale_after_days": 14,
+    "sources": {
+      "skyline": {
+        "label": "Skyline - Comparaison europeenne des depenses publiques",
+        "resource_id": "4806ff8c-1038-41c3-8547-298980172e09",
+        "resource_url": "https://www.data.gouv.fr/fr/datasets/r/4806ff8c-1038-41c3-8547-298980172e09",
+        "dataset_url": "https://www.data.gouv.fr/fr/datasets/comparaison-europeenne-des-depenses-publiques/",
+        "fetch_method": "direct_url",
+        "fetch_details": "Resource metadata not found from known endpoints.; details=['https://www.data.gouv.fr/api/1/datasets/r/4806ff8c-1038-41c3-8547-298980172e09/ -> HTTP 404', 'https://www.data.gouv.fr/api/1/datasets/resources/4806ff8c-1038-41c3-8547-298980172e09/ -> HTTP 404']"
+      },
+      "plf2025": {
+        "label": "PLF 2025 - Depenses budgetaires par mission",
+        "resource_id": "b7da87c8-e4e3-4914-8a69-9014f95136d9",
+        "resource_url": "https://www.data.gouv.fr/fr/datasets/r/b7da87c8-e4e3-4914-8a69-9014f95136d9",
+        "dataset_url": "https://www.data.gouv.fr/fr/datasets/plf-2025-depenses-budgetaires-de-letat/",
+        "fetch_method": "direct_url",
+        "fetch_details": "Resource metadata not found from known endpoints.; details=['https://www.data.gouv.fr/api/1/datasets/r/b7da87c8-e4e3-4914-8a69-9014f95136d9/ -> HTTP 404', 'https://www.data.gouv.fr/api/1/datasets/resources/b7da87c8-e4e3-4914-8a69-9014f95136d9/ -> HTTP 404']"
+      },
+      "recettes": {
+        "label": "PLF 2024 - Recettes budgetaires",
+        "resource_id": "8cfff293-a2f3-4885-8262-81533fd71908",
+        "resource_url": "https://www.data.gouv.fr/fr/datasets/r/8cfff293-a2f3-4885-8262-81533fd71908",
+        "dataset_url": "https://www.data.gouv.fr/fr/datasets/plf-2024-recettes-budgetaires-de-letat/",
+        "fetch_method": "direct_url",
+        "fetch_details": "Resource metadata not found from known endpoints.; details=['https://www.data.gouv.fr/api/1/datasets/r/8cfff293-a2f3-4885-8262-81533fd71908/ -> HTTP 404', 'https://www.data.gouv.fr/api/1/datasets/resources/8cfff293-a2f3-4885-8262-81533fd71908/ -> HTTP 404']"
+      }
+    },
+    "coverage_years": {
+      "skyline": 2023,
+      "budget": 2025,
+      "recettes": 2024
+    }
+  }
+}

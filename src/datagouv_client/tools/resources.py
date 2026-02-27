@@ -11,20 +11,35 @@ def get_resource_info(base_url: str, resource_id: str, timeout: int = 30) -> dic
     Get resource metadata. Uses data.gouv.fr API.
     If direct lookup fails, use list_dataset_resources to get resource from a dataset.
     """
-    try:
-        resp = httpx.get(f"{base_url}/datasets/r/{resource_id}/", timeout=timeout)
-        resp.raise_for_status()
-        r = resp.json()
-        return {
-            "id": r.get("id"),
-            "title": r.get("title"),
-            "format": r.get("format"),
-            "url": r.get("url"),
-            "filesize": r.get("filesize"),
-            "mime_type": r.get("mime"),
-        }
-    except httpx.HTTPStatusError:
-        return {"error": "Resource not found. Get resource from list_dataset_resources.", "id": resource_id}
+    endpoints = [
+        f"{base_url}/datasets/r/{resource_id}/",
+        f"{base_url}/datasets/resources/{resource_id}/",
+    ]
+
+    errors: list[str] = []
+    for endpoint in endpoints:
+        try:
+            resp = httpx.get(endpoint, timeout=timeout)
+            resp.raise_for_status()
+            r = resp.json()
+            return {
+                "id": r.get("id") or resource_id,
+                "title": r.get("title"),
+                "format": r.get("format"),
+                "url": r.get("url"),
+                "filesize": r.get("filesize"),
+                "mime_type": r.get("mime") or r.get("mime_type"),
+            }
+        except httpx.HTTPStatusError as e:
+            errors.append(f"{endpoint} -> HTTP {e.response.status_code}")
+        except Exception as e:
+            errors.append(f"{endpoint} -> {e}")
+
+    return {
+        "error": "Resource metadata not found from known endpoints.",
+        "id": resource_id,
+        "details": errors,
+    }
 
 
 def download_resource(

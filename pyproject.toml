@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Python client for data.gouv.fr - MCP-compatible tools for datasets, resources, and OLL rent data"
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.10"
+requires-python = ">=3.13,<3.14"
 authors = [{ name = "Contributors" }]
 keywords = ["datagouv", "data.gouv.fr", "opendata", "mcp", "france"]
 classifiers = [
@@ -16,9 +16,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering",
 ]
 dependencies = [

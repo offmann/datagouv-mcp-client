@@ -2,6 +2,17 @@
 
 Python client for [data.gouv.fr](https://www.data.gouv.fr) – MCP-compatible tools for datasets, resources, and open data. Use it in LLM agents, scripts, or as a library.
 
+## Architecture
+
+| Part | Role |
+|------|------|
+| **`src/datagouv_client/`** | Python MCP client – search datasets, get metadata, download resources |
+| **`scripts/data_pipeline.py`** | Fetches CSVs: tries `DatagouvClient.get_resource_info()` for URL, falls back to direct URL |
+| **`scripts/prepare_data.py`** | Uses data_pipeline → cleans → writes `app/public/data/public_spending.json` |
+| **`app/`** | React web app – reads static JSON only (no Python at runtime) |
+
+The MCP client is used during data preparation for metadata lookup. The web app never runs Python.
+
 ## Features
 
 - **Search datasets** – Find datasets by keywords
@@ -12,6 +23,8 @@ Python client for [data.gouv.fr](https://www.data.gouv.fr) – MCP-compatible to
 
 ## Install
 
+Python version for this repo: **3.13** (managed via `uv` and `.python-version`).
+
 ```bash
 pip install datagouv-mcp-client
 ```
@@ -21,7 +34,8 @@ Or from source:
 ```bash
 git clone https://github.com/your-username/datagouv-mcp-client.git
 cd datagouv-mcp-client
-pip install -e .
+uv venv --python 3.13
+uv sync
 ```
 
 ## Quick start
@@ -54,7 +68,7 @@ client = DatagouvClient()
 tools = get_openai_tools()
 
 # In your agent loop, when the LLM returns a tool call:
-result = run_tool("search_datasets", {"query": "qualité air"}, client)
+result = run_tool("search_datasets", {"query": "air quality"}, client)
 ```
 
 ## Extending the client
@@ -74,6 +88,27 @@ register_tool("my_custom_tool", my_custom_tool)
 ### Add OLL (rent) tools
 
 OLL tools require loading Observatoires Locaux des Loyers data. See `examples/oll_agent.py` for a full example with rent stats and price checks.
+
+### Public spending – app interactive
+
+Citizen web app **« Où va votre argent ? »** to explain where public money goes:
+
+```bash
+uv run python scripts/prepare_data.py
+uv run python scripts/validate_data_contract.py
+cd app && npm install && npm run dev
+```
+
+Open http://localhost:5173. The app includes:
+- A transparent estimated tax contribution calculator
+- Interactive tax revenue breakdown (readable ranked bars)
+- Budget mission treemap + mission explorer
+- "Per 100 EUR spent" allocation view
+- France vs Europe comparison chart
+
+Data sources: PLF 2024/2025 and Skyline public spending datasets (data.gouv.fr).
+Generated JSON also includes `meta.generated_at_utc`, `meta.stale_after_days`, and full source provenance.
+The prepare pipeline uses `scripts/data_pipeline.py`, which tries `DatagouvClient.get_resource_info(resource_id)` first; if that fails or the client is unavailable, it fetches from the configured direct URL. See [docs/data_pipeline_modes.md](docs/data_pipeline_modes.md) for `mcp_resource_info` vs `direct_url`.
 
 ## Data handling
 
