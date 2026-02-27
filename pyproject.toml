@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datagouv-mcp-client"
+version = "0.1.0"
+description = "Python client for data.gouv.fr - MCP-compatible tools for datasets, resources, and OLL rent data"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Contributors" }]
+keywords = ["datagouv", "data.gouv.fr", "opendata", "mcp", "france"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "httpx>=0.27.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+]
+
+[project.optional-dependencies]
+oll = ["pyarrow>=14.0.0"]
+dev = ["pytest>=7.0", "ruff>=0.1.0"]
+
+[project.urls]
+Homepage = "https://github.com/offmann/datagouv-mcp-client"
+Repository = "https://github.com/offmann/datagouv-mcp-client"
+Documentation = "https://github.com/offmann/datagouv-mcp-client#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
